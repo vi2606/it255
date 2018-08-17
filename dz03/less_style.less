@@ -1,0 +1,260 @@
+/* colors setup */
+
+@black: rgb(0, 0, 0);
+// @col_head_foot: rgb(75, 75, 75); // header, footer
+@col_head_foot: lighten(@black, 30%); // header, footer
+// @col_main: rgb(90, 90, 90); //main
+@col_main: lighten(@black, 35%); //main
+
+// @shadow: rgb(130, 130, 130);
+@shadow: darken(@white, 50%);
+
+@light_gray: darken(@white, 20%);
+@white: rgb(255, 255, 255);
+
+/* mixin */
+.hover_link {
+  background: @light_gray;
+  color: @black;
+  text-decoration: none;
+}
+
+// text-shadow using named arguments with defaults
+.text_shadow(@width_x: 0.15rem, @width_y: 0.15rem, @blur:0.15rem, @color: black) {
+  text-shadow: @width_x @width_y @blur @color;
+}
+.box-shadow(@x: 0, @y: 0, @blur:1px, @color: #000) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -ms-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+/* Styles */
+/* apply a natural box layout model to all elements, but allowing components to change */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: @light_gray;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.7;
+}
+
+/* Header and footer styles */
+
+header,
+footer,
+.header_grid-container {
+  background-color: @col_head_foot;
+}
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+
+  .header-main {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .header_item1 {
+    grid-area: grid_nav_logo;
+    width: 32rem;
+  }
+
+  .header_item2 {
+    grid-area: grid_nav_links;
+  }
+
+  .header_item3 {
+    grid-area: grid_nav_empty;
+  }
+
+  .header_grid-container {
+    display: grid;
+    grid-template-areas: "grid_nav_logo grid_nav_empty grid_nav_empty" "grid_nav_logo grid_nav_empty grid_nav_empty" "grid_nav_logo grid_nav_links grid_nav_links";
+    grid-gap: 10px;
+    padding: 0;
+  }
+  .header-text {
+    float: right;
+    padding-top: 0.3rem;
+    font-family: "Lobster", cursive;
+    font-size: 5.5rem;
+    .text_shadow(0.15rem, 0.15rem, 0.15rem, @shadow);
+  }
+
+  img {
+    padding: 0.5rem;
+    width: 9rem;
+    float: left;
+  }
+}
+
+/* Navigation styles */
+
+nav {
+  display: block;
+  float: right;
+  padding-right: 0.2rem;
+
+  /* Links in navbar */
+
+  a {
+    display: inline-block;
+    color: darken(@white, 10%);
+    text-align: center;
+    padding: 1.5rem 1.3rem;
+    text-decoration: none;
+  }
+
+  /* Mouse-over */
+
+  a:hover {
+    .hover_link;
+  }
+}
+
+/* Nested footer */
+
+footer {
+  font-size: 80%;
+  text-align: center;
+  .text_shadow;
+  color: @white;
+
+  img {
+    padding-top: 0.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 4rem;
+  }
+
+  h3 {
+    margin-bottom: 0;
+    margin-top: 0.1rem;
+  }
+
+  .copyright {
+    font-size: 80%;
+  }
+
+  .contact-info {
+    display: inline-block;
+    /* padding-bottom: 0.5rem; */
+  }
+
+  .contact-info a {
+    color: @white;
+    padding: 0.3rem 0.3rem 0.1rem 0.3rem;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .contact-info a:hover {
+    .hover_link;
+    .text_shadow(0rem, 0rem, 0rem, black);
+  }
+}
+
+main,
+aside {
+  background-color: @col_main;
+}
+
+/* Grid layout for section, article, aside */
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "grid_title grid_title grid_title grid_title grid_title grid_title" "grid_text grid_text grid_text grid_text grid_empty grid_empty" "grid_text grid_text grid_text grid_text grid_right grid_right";
+  grid-gap: 10px;
+  background-color: @col_main;
+  padding: 10px;
+  color: aqua;
+
+  /* Grid layout for section, article, aside */
+  .gr_title {
+    grid-area: grid_title;
+    text-align: center;
+  }
+
+  .gr_text {
+    grid-area: grid_text;
+    text-align: center;
+  }
+
+  .item3 {
+    grid-area: grid_empty;
+  }
+
+  .gr_right {
+    grid-area: grid_right;
+    font-size: 85%;
+  }
+}
+
+main {
+  width: 75%;
+  margin: auto;
+}
+
+.empty-div {
+  height: 9.5rem;
+}
+
+section h1 {
+  .text_shadow(0.15rem, 0.15rem, 0.15rem @col_head_foot);
+  text-align: center;
+}
+
+section p {
+  text-align: left;
+}
+
+.h_div {
+  display: inline-block;
+  /* width: 40rem; */
+}
+
+h1,
+aside h4,
+article h4 {
+  padding: 0 1rem;
+  border: 0.3rem solid @col_head_foot;
+  border-radius: 1rem;
+  background-color: @col_head_foot;
+  .box-shadow(0.1rem, 0.1rem, 0.1rem, black);
+}
+
+h1,
+aside h4,
+article h4 {
+  text-align: center;
+  .text_shadow;
+}
+
+aside {
+  padding-right: 0.6rem;
+  font-size: 75%;
+}
+
+hr {
+  width: 97%;
+  border: 0.12rem solid @shadow;
+}
