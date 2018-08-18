@@ -1,13 +1,16 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
+
 body,
 html {
   margin: 0;
   padding: 0;
 }
+
 html {
   box-sizing: border-box;
   background-color: #b1b1b1;
 }
+
 *,
 *:before,
 *:after {
@@ -20,16 +23,19 @@ html {
 }
 
 /* Header and footer styles */
+
 header,
 footer,
 .header_grid-container {
   background-color: rgb(75, 75, 75);
 }
+
 header {
   width: 100%;
   margin: 0 auto;
   position: fixed;
 }
+
 .header-main {
   width: 75%;
   margin: 0 auto;
@@ -39,9 +45,11 @@ header {
   grid-area: grid_nav_logo;
   width: 31rem;
 }
+
 .header_item2 {
   grid-area: grid_nav_links;
 }
+
 .header_item3 {
   grid-area: grid_nav_empty;
 }
@@ -53,10 +61,7 @@ aside {
 
 .header_grid-container {
   display: grid;
-  grid-template-areas:
-    "grid_nav_logo grid_nav_empty grid_nav_empty"
-    "grid_nav_logo grid_nav_empty grid_nav_empty"
-    "grid_nav_logo grid_nav_links grid_nav_links";
+  grid-template-areas: "grid_nav_logo grid_nav_empty grid_nav_empty" "grid_nav_logo grid_nav_empty grid_nav_empty" "grid_nav_logo grid_nav_links grid_nav_links";
   grid-gap: 10px;
   padding: 0;
 }
@@ -76,14 +81,17 @@ header img {
 }
 
 /* Navigation styles */
+
 nav {
   display: block;
-  float: right;
+  /* float: right; */
   padding-right: 0.2rem;
   /* margin-top: 5rem; */
+  width: 100%;
 }
 
 /* Links in navbar */
+
 nav a {
   /* float: left; */
   display: inline-block;
@@ -91,9 +99,11 @@ nav a {
   text-align: center;
   padding: 1.5rem 1.3rem;
   text-decoration: none;
+  width: 19.5%;
 }
 
 /* Mouse-over */
+
 nav a:hover {
   background: #ddd;
   color: black;
@@ -114,16 +124,20 @@ footer img {
   margin-right: auto;
   width: 4rem;
 }
+
 footer h4 {
   margin-bottom: 0;
   margin-top: 0.1rem;
 }
+
 .copyright {
   font-size: 80%;
 }
+
 .contact-info {
   padding-bottom: 0.5rem;
 }
+
 .contact-info a {
   color: aqua;
   padding: 0.3rem;
@@ -131,29 +145,31 @@ footer h4 {
 }
 
 /* Grid layout for section, article, aside */
+
 .gr_title {
   grid-area: grid_title;
   text-shadow: 0.15rem 0.15rem rgb(0, 0, 0);
   text-align: center;
 }
+
 .gr_text {
   grid-area: grid_text;
 }
+
 .item3 {
   grid-area: grid_empty;
 }
+
 .gr_right {
   grid-area: grid_right;
   font-size: 85%;
 }
 
 /* Grid layout for section, article, aside */
+
 .grid-container {
   display: grid;
-  grid-template-areas:
-    "grid_title grid_title grid_title grid_title grid_title grid_title"
-    "grid_text grid_text grid_text grid_text grid_empty grid_empty"
-    "grid_text grid_text grid_text grid_text grid_right grid_right";
+  grid-template-areas: "grid_title grid_title grid_title grid_title grid_title grid_title" "grid_text grid_text grid_text grid_text grid_empty grid_empty" "grid_text grid_text grid_text grid_text grid_right grid_right";
   grid-gap: 10px;
   background-color: rgb(90, 90, 90);
   padding: 10px;
@@ -164,6 +180,7 @@ main {
   width: 75%;
   margin: auto;
 }
+
 .empty-div {
   height: 9.5rem;
 }
@@ -172,11 +189,13 @@ section h1 {
   text-shadow: 0.15rem 0.15rem rgb(0, 0, 0);
   text-align: center;
 }
+
 aside h4,
 article h4 {
   text-shadow: 0.15rem 0.15rem rgb(0, 0, 0);
   text-align: center;
 }
+
 aside {
   padding-right: 0.6rem;
   font-size: 85%;
