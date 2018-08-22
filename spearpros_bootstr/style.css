@@ -1,0 +1,22 @@
+* {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.7;
+}
+
+body {
+  background-color: beige;
+}
+
+.header-text {
+  /* float: right; */
+  padding-top: 0.3rem;
+  font-family: "Lobster", cursive;
+  font-size: 4.5rem;
+  .text_shadow(0.15rem, 0.15rem, 0.15rem, @shadow);
+}
+
+.header-img {
+  padding: 0.2rem;
+  max-width: 100%;
+  height: auto;
+}

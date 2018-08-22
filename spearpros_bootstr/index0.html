@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SpearPros</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 
     <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+    <link rel="stylesheet/less" href="less_style.less" type="text/css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js"></script>
+    <!-- <script src="../less-1.3.0.min.js"></script> -->
 
+    <!-- <script src="script.js" defer></script> -->
+
+
+    <script>
+    </script>
 </head>
 
 <body>
@@ -20,21 +28,19 @@
 
                 <div class="header_item1">
                     <div>
-                        <img class="header-img" src="spear_throw.svg" alt="">
-                        <div class="header-text">SpearPros</div>
+                        <img id="header_img" class="header-img" src="spear_throw.svg" alt="">
+                        <div id="header_text" class="header-text" ">SpearPros</div>
                     </div>
                 </div>
-                <div class="header_item_3"></div>
+                <div class="header_item_3 "></div>
 
-                <!-- <div class="header_item2" style="background-color: khaki;"> -->
-                <div class="header_item2">
-
+                <div class="header_item2 ">
                     <nav>
-                        <a href="#">This is link 1</a>
-                        <a href="#">This is link 2</a>
-                        <a href="#">This is link 3</a>
-                        <a href="#">This is link 4</a>
-                        <a href="#">This is link 5</a>
+                        <a href="# ">This is link 1</a>
+                        <a href="# ">This is link 2</a>
+                        <a href="# ">This is link 3</a>
+                        <a href="# ">This is link 4</a>
+                        <a href="# ">This is link 5</a>
                     </nav>
                 </div>
 
@@ -44,29 +50,46 @@
 
     <main>
         <!-- Empty div to compensate for fixed header -->
-        <div class="empty-div"></div>
+        <div class="empty-div "></div>
 
 
+        <!-- Beginning of section -->
+        <div class="grid-container ">
+            <div class="gr_title ">
+                <div class="h_div ">
+                    <h1>First section of related stuff</h1>
 
-        <div class="grid-container">
-            <div class="gr_title">
-                <h1>First section of related stuff</h1>
+                </div>
             </div>
-            <section class="gr_text">
+            <section id="gr_text " class="gr_text ">
                 <article>
-                    <h4>1st article in the section</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    <div class="h_div ">
+                        <h4>1st article in the section</h4>
+                        <button onclick="highlight_spans() ">Click to highlight spans for this id</button>
+                    </div>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.</p>
+                        ex ea commodo consequat.
+                       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.</p>
+                    <div>
+                        <button onclick="change_text() ">Click to change text</button>
+                        <br>
+                        <div id="text_to_change ">this text will change</div>
+                    </div>
                 </article>
 
                 <article>
-                    <h4>2nd article in the section</h4>
+                    <div class="h_div ">
+                        <h4>2nd article in the section</h4>
+
+                    </div>
+
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
                         rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                        explicabo.
+                        <span>Nemo enim</span> ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
                         magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
                         quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
                         ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
@@ -75,50 +98,125 @@
                         dolorem eum fugiat quo voluptas nulla pariatur?</p>
                 </article>
             </section>
-            <div class="item3"></div>
-            <aside class="gr_right">
-
+            <div class="item3 "></div>
+            <aside class="gr_right ">
                 <h4>This goes to the side for some purpose</h4>
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
                     literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
                     College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
                     and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem
-                    Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good
+                    Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum " (The Extremes of Good
                     and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
-                    during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
+                    during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet.. ", comes from a line
                     in section 1.10.32. Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
                     consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,
                     discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                    Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
-                    on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
-                    dolor sit amet..", comes from a line in section 1.10.32.
+                            Bonorum et Malorum " (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
+                    on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+                            ipsum dolor sit amet.. ", comes from a line in section 1.10.32.
                 </p>
-
             </aside>
         </div>
+        <!-- End of section -->
+
+
+        <hr>
+        <!-- Beginning of section -->
+        <div class="grid-container ">
+            <div class="gr_title ">
+                <div class="h_div ">
+                    <h1>Second section of related stuff</h1>
+
+                </div>
+            </div>
+            <section class="gr_text ">
+                <article>
+                    <div class="h_div ">
+                        <h4>1st article in the section</h4>
+
+                    </div>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat.
+                        <span>Duis aute</span> irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.</p>
+                </article>
+
+                <article>
+                    <div class="h_div ">
+                        <h4>2nd article in the section</h4>
+
+                    </div>
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                        rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo.
+                        <span>Nemo enim</span> ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                        magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+                        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
+                        ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
+                        ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
+                        iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
+                        dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                </article>
+            </section>
+            <div class="item3 "></div>
+            <aside class="gr_right ">
+                <h4>This goes to the side for some purpose</h4>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+                    literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+                    College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
+                    and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem
+                    Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum " (The Extremes of Good
+                    and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
+                    during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet.. ", comes from a line
+                    in section 1.10.32. Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                    consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,
+                    discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+                            Bonorum et Malorum " (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
+                    on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+                            ipsum dolor sit amet.. ", comes from a line in section 1.10.32.
+                </p>
+            </aside>
+        </div>
+        <!-- End of section -->
+
 
         <hr>
 
+        <!-- Beginning of section -->
+        <div class="grid-container ">
+            <div class="gr_title ">
+                <div class="h_div ">
+                    <h1>Third section of related stuff</h1>
 
-        <div class="grid-container">
-            <div class="gr_title">
-                <h1>Second section of related stuff</h1>
+                </div>
             </div>
-            <section class="gr_text">
+            <section class="gr_text ">
                 <article>
-                    <h4>1st article in the section</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    <div class="h_div ">
+                        <h4>1st article in the section</h4>
+
+                    </div>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.</p>
+                        ex ea commodo consequat.
+                        <span>Duis aute</span> irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.</p>
                 </article>
 
                 <article>
-                    <h4>2nd article in the section</h4>
+                    <div class="h_div ">
+                        <h4>2nd article in the section</h4>
+
+                    </div>
+
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
                         rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                        explicabo.
+                        <span>Nemo enim</span> ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
                         magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
                         quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
                         ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
@@ -127,77 +225,26 @@
                         dolorem eum fugiat quo voluptas nulla pariatur?</p>
                 </article>
             </section>
-            <div class="item3"></div>
-            <aside class="gr_right">
-
+            <div class="item3 "></div>
+            <aside class="gr_right ">
                 <h4>This goes to the side for some purpose</h4>
                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
                     literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
                     College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
                     and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem
-                    Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good
+                    Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum " (The Extremes of Good
                     and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
-                    during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
+                    during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet.. ", comes from a line
                     in section 1.10.32. Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
                     consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,
                     discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                    Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
-                    on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
-                    dolor sit amet..", comes from a line in section 1.10.32.
+                            Bonorum et Malorum " (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
+                    on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem
+                            ipsum dolor sit amet.. ", comes from a line in section 1.10.32.
                 </p>
-
             </aside>
         </div>
-        <hr>
-
-        <div class="grid-container">
-            <div class="gr_title">
-                <h1>Third section of related stuff</h1>
-            </div>
-            <section class="gr_text">
-                <article>
-                    <h4>1st article in the section</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.</p>
-                </article>
-
-                <article>
-                    <h4>2nd article in the section</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                        rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                        magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
-                        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
-                        ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
-                        ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
-                        iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
-                        dolorem eum fugiat quo voluptas nulla pariatur?</p>
-                </article>
-            </section>
-            <div class="item3"></div>
-            <aside class="gr_right">
-
-                <h4>This goes to the side for some purpose</h4>
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
-                    literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-                    College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
-                    and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem
-                    Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good
-                    and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular
-                    during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
-                    in section 1.10.32. Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
-                    consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,
-                    discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                    Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
-                    on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
-                    dolor sit amet..", comes from a line in section 1.10.32.
-                </p>
-
-            </aside>
-        </div>
+        <!-- End of section -->
 
     </main>
 
@@ -205,18 +252,18 @@
     <footer>
 
         <div>
-            <img src="spear_throw.svg" alt="">
+            <img src="spear_throw.svg " alt=" " id="footer_img ">
         </div>
-        <div class="copyright">Copyright &reg2018</div>
+        <div class="copyright ">Copyright &reg2018</div>
 
-        <h4>Keep in Touch!</h4>
+        <h3>Keep in Touch!</h3>
 
         <!-- Social media links. -->
-        <div class="contact-info">
-            <a href="mailto:email@example.com">email@example.com</a>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://www.linkedin.com/in/">LinkedIn</a>
-            <a href="http://fb.me">Facebook</a>
+        <div class="contact-info ">
+            <a href="mailto:info@spearpros.com ">info@spearpros.com</a>
+            <a href="https://twitter.com ">Twitter</a>
+            <a href="https://www.linkedin.com/in/ ">LinkedIn</a>
+            <a href="http://fb.me ">Facebook</a>
         </div>
 
     </footer>
