@@ -18,53 +18,49 @@
 
   <header>
 
-    <nav class="navbar bg-light navbar-light navbar-expand-* ">
+    <nav class="navbar fixed-top bg-light navbar-light navbar-expand-md">
       <div class="container-fluid">
-        <div class="navbar-brand d-sm-inline-block ">
-
+        <!-- <div class="navbar-brand d-sm-inline-block "> -->
+        <div class="navbar-brand">
           <img src="img/MetHotels2.svg" alt="">
-          <!-- <img src="MetHotelsInv.svg" alt=""> -->
-
         </div>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- <div id="navbar1" class="navbar-nav d-sm-inline-block d-md-flex  ml-sm-aut0"> -->
+        <div id="navbar1" class="navbar-nav collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto">
 
-        <div id="navbar1" class="navbar-nav d-sm-inline-block d-md-flex  ml-sm-aut0">
-
-          <a class="nav-item nav-link" href="#">
-            Home
-          </a>
-          <a class="nav-item nav-link" href="#">
-            Mission
-          </a>
-          <a class="nav-item nav-link" href="#">
-            Reviews
-          </a>
-          <a class="nav-item nav-link" href="#">
-            About us
-          </a>
+            <li class="nav-item ">
+              <a class="nav-link" href="#navbar1">Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#mission">Mission</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+          </ul>
         </div>
+        <!-- <span class="navbar-text d-none d-xl-inline-block ml-5"> -->
         <span class="navbar-text d-none d-xl-inline-block ml-5">
           Choosing us you will never sleep elsewhere
-
-          <!-- <strong>
-              <i>After us, you will never sleep elsewhere</i>
-            </strong> -->
         </span>
       </div>
       <!-- container-fluid for header -->
     </nav>
-
 
   </header>
 
 
   <!-- carousel  -->
 
-  <div id="featured-cont" class="container-fluid">
+  <div id="featured-cont" class="container-fluid px-0">
     <div id="featured" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#featured" data-slide-to="0" class="active"></li>
@@ -100,7 +96,7 @@
 
 
   <!-- Date picker -->
-  <div id="date-pick" class="container-fluid">
+  <div id="date-pick" class="container-fluid pb-3 pt-3">
 
     <form>
 
@@ -110,10 +106,10 @@
         <div class="form-group form-inline ">
           <div class="row ">
 
-            <input class="form-control mx-1 mt-1 col-sm-3 col-lg-3 offset-lg-1 " type="text " placeholder="Datum dolaska ">
-            <input class="form-control mx-1 mt-1 col-sm-3 col-lg-3 " type="text " placeholder="Datum odlaska ">
-            <input class="form-control mx-1 mt-1 col-sm-3 col-lg-3 " type="text " placeholder="Broj osoba ">
-            <button class="btn btn-primary mx-1 mt-1" type="submit " style=" ">Find room </button>
+            <input class="form-control mx-1 mt-1 col-sm-2 " type="text " placeholder="Datum dolaska ">
+            <input class="form-control mx-1 mt-1 col-sm-2 " type="text " placeholder="Datum odlaska ">
+            <input class="form-control mx-1 mt-1 col-sm-2 " type="text " placeholder="Broj osoba ">
+            <button class="btn btn-primary mx-1 mt-1 col-*" type="submit ">Find room </button>
 
           </div>
 
@@ -126,6 +122,77 @@
   </div>
 
 
+
+
+
+  <div class="main">
+    <div class="page pt-3" id="mission">
+      <div class="content container">
+        <h2>Our Mission</h2>
+        <div class="row">
+          <p class="col-md-5 col-md-offset-1">MetHotels is the world class hotel and getaway from everyday's life. Years of quality service and a army of satisfied
+            guests are behind us and we look forward to many more still to&nbsp;come.</p>
+          <p class="col-md-5">We strive to be your only option when it comes to relaxing, having fun or just needing a place to lay your head.
+            We want to give you long and healthy rest and have you ready for challenges that tomorrow&nbsp;brings.</p>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- content container -->
+    </div>
+    <!-- mission page -->
+
+    <div class="page" id="services">
+      <div class="content container">
+        <h2>Services</h2>
+        <div class="row">
+          <article class="service col-md-4 col-sm-6 col-xs-12">
+            <img class="icon" src="images/icon-exoticpets.svg" alt="Icon">
+            <h3>Accommodation</h3>
+            <p>We offer world class accommodation for your pleasure.</p>
+          </article>
+
+          <article class="service col-md-4 col-sm-6 col-xs-12">
+            <img class="icon" src="images/icon-grooming.svg" alt="Icon">
+            <h3>Dining</h3>
+            <p>Our master chefs will cook for you meals that you won't forget.</p>
+          </article>
+
+          <article class="service col-md-4 col-sm-6 col-xs-12">
+            <img class="icon" src="images/icon-health.svg" alt="Icon">
+            <h3>Health</h3>
+            <p>Enjoy the sun next to our magnificent pool while being served best beverages.</p>
+          </article>
+
+          <article class="service col-md-4 col-sm-6 col-xs-12">
+            <img class="icon" src="images/icon-nutrition.svg" alt="Icon">
+            <h3>Nutrition</h3>
+            <p>Let our nutrition experts review your pet's diet and prescribe a custom nutrition plan for optimum health and
+              disease prevention.</p>
+          </article>
+
+          <article class="service col-md-4 col-sm-6 col-xs-12">
+            <img class="icon" src="images/icon-pestcontrol.svg" alt="Icon">
+            <h3>Pest Control</h3>
+            <p>We offer the latest advances in safe and effective prevention and treatment of fleas, ticks, worms, heart worm,
+              and other parasites.</p>
+          </article>
+
+          <article class="service col-md-4 col-sm-6 col-xs-12">
+            <img class="icon" src="images/icon-vaccinations.svg" alt="Icon">
+            <h3>Vaccinations</h3>
+            <p>Our veterinarians are experienced in modern vaccination protocols that prevent many of the deadliest diseases
+              in pets.</p>
+          </article>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- content container -->
+    </div>
+    <!-- services page -->
+
+
+  </div>
+  <!-- main -->
 
 
 
