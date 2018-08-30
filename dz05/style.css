@@ -2,6 +2,7 @@ body {
   background-color: rgb(248, 249, 250);
   padding-top: 70px;
   font-family: "Raleway", cursive;
+  position: relative;
 }
 
 h1,
@@ -34,6 +35,7 @@ header img {
 
 header .navbar-brand {
   background: url(img/MetHotels2.svg);
+  /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: 1.5rem 0;
   height: 3.7rem;
@@ -46,7 +48,7 @@ footer {
   background: #586D74;
   color: white;
   font-size: .8em;
-  padding: 20px 0 40px 0;
+  padding: .7rem 0 .7rem 0;
 }
 
 footer a {
@@ -65,10 +67,6 @@ footer .phone {
 
 .bg-dark {
   background-color: transparent !important;
-}
-
-footer .navbar-nav {
-  flex-direction: row;
 }
 
 footer .navbar-nav a {
