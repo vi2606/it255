@@ -1,0 +1,75 @@
+body {
+    background-color: #cccccc;
+    /* background-image: linear-gradient(to bottom right, rgb(121, 96, 96), rgb(201, 201, 173)); */
+}
+
+#content {
+    /* height:100vh; */
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    /* background-color: aquamarine; */
+    border: 5px double rgb(146, 129, 129);
+    border-radius: 80px 0 40px 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#ajaxContent {
+    margin: auto;
+    width: 85%;
+    padding: 30px;
+    padding-bottom: 0;
+    text-align: left;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.joke-id {
+    font-size: 70%;
+    font-weight: bolder;
+    font-style: oblique;
+    color: rgb(66, 54, 54);
+    text-transform: uppercase;
+    background-color: rgb(165, 165, 165);
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid rgb(88, 86, 86);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 5px 5px 10px #888888;
+}
+
+#ajaxContent-cat {
+    padding-right: 30px;
+    text-align: right;
+    font-size: 80%;
+    /* font-weight: bolder; */
+    /* font-style: oblique; */
+    color: rgb(102, 82, 82);
+}
+
+.joke {
+    text-shadow: 2px 2px 5px #777a75;
+    padding-top: 5px;
+}
+
+.joke-cat {
+    text-transform: uppercase;
+    font-size: 80%;
+    font-weight: bolder;
+    /* font-style: oblique; */
+}
+
+.flash-shadow-stat {
+    text-shadow: 1px 1px 5px #4f8d26;
+}
+
+.flash-shadow {
+    text-shadow: 3px 3px 4px #4f7c30;
+}
+
+.flash-shadow-up {
+    text-shadow: 5px 5px 5px #4f7c30;
+}

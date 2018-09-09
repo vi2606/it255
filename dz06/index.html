@@ -3,105 +3,29 @@
 
 <head>
     <title>Ajax JQuery</title>
-    <style>
-        #content{
-        width: 75%;
-        text-align: center;
-        margin: auto;
-        /* background-color: aquamarine; */
-    }
-
-        #ajaxContent {
-        margin: auto;
-        width: 80%;
-        padding: 30px;
-        border: 5px double lightgray;
-        border-radius: 80px 0 40px 0;
-        text-align: left;
-        text-align: justify;
-        text-justify: inter-word;
-    }
-
-    .joke-id{
-        font-size: 80%;
-        font-weight: bolder;
-        font-style: oblique;
-        color:rgb(66, 54, 54);
-    }
-   
-   .joke{
-    text-shadow: 2px 2px 5px #777a75;
-   }
-  </style>
-
-    <!-- <link rel="stylesheet" href="../style.css" /> -->
-    <!-- <script type="text/javascript" src="../jquery-3.0.0.js"></script> -->
-
+    <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        $("document").ready(function () {
-            getData();
-        });
 
-        function getData() {
-            $.ajax({
-                // the URL for the request
-                url: "http://api.icndb.com/jokes/random",
-
-                // whether this is a POST or GET request
-                type: "GET",
-
-                // the type of data we expect back
-                dataType: "json",
-
-                // function to call for success
-                success: successFn,
-
-                // function to call on an error
-                error: errorFn,
-
-                // code to run regardless of success or failure
-                complete: function (xhr, status) {
-                    console.log("The request is complete!");
-                }
-            });
-        }
-
-        function successFn(result) {
-            console.log("Setting result");
-            console.log(result.value.id);
-            var output = "";
-            output += '<span class="joke-id">Joke no: ' + result.value.id + '</span></br>';
-            output += ' <h2 class="joke">' + result.value.joke + "</h2> </br>";
-            if (typeof result.value.categories[0] !== 'undefined') {
-                var l = result.value.categories.length;
-                output += "Category: ";
-                var i;
-                for (i = 0; i < l; i++) {
-                    output += result.value.categories[i] + " ";
-                }
-
-                output += "</br>";
-
-            }
-            $("#ajaxContent").append(output);
-        }
-
-        function errorFn(xhr, status, strErr) {
-            console.log("There was an error!");
-        }
     </script>
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <div id="content">
-        <h1>Best Chuck Norris jokes</h1>
+    <header></header>
+    <div class="container">
+        <h1 id="heading" class="flash-shadow-stat">Best Chuck Norris Jokes</h1>
 
-        <p></p>
-        <p id="ajaxContent"></p>
+        <div id="content">
+
+            <p id="ajaxContent"></p>
+            <p id="ajaxContent-cat"></p>
+
+        </div>
     </div>
+    <footer></footer>
 </body>
 
 </html>
