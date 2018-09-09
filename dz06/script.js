@@ -65,3 +65,6 @@ setInterval(function () {
     }, 600);
 
 }, 900);
+
+
+// $("#heading").on("click", getData());
