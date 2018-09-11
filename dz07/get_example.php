@@ -17,7 +17,7 @@ $test_array = array (
 );
 
 echo json_encode($test_array);
-}else 
+}else if($type == "xml")
 
 {
 header("Content-type: text/xml");
@@ -33,5 +33,8 @@ $xml = new SimpleXMLElement('<root/>');
 array_walk_recursive($test_array, array ($xml, 'addChild'));
 
 print $xml->asXML();
+} else{
+    echo "Error: No data type specified";
+
 }
 ?>
