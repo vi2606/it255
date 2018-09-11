@@ -42,4 +42,5 @@ print $xml->asXML();
 } else{
     echo "Error: No data type specified";
 }
+
 ?>
