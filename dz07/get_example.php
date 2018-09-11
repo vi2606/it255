@@ -35,6 +35,5 @@ array_walk_recursive($test_array, array ($xml, 'addChild'));
 print $xml->asXML();
 } else{
     echo "Error: No data type specified";
-
 }
 ?>

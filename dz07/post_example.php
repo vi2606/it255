@@ -18,7 +18,6 @@ $datII=strtotime($doDatuma);
 $razlika=abs(ceil(($datI - $datII)/60/60/24));
 // $razlika=ceil(($datII - $datI)/60/60/24);
 
-
 if($type == "json"){
 header("Content-type: application/json");
 
