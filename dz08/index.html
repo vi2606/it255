@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modal.css">
+
 
   <title> MetHotels </title>
 </head>
@@ -18,6 +20,112 @@
 
 
 <body data-spy="scroll" data-target=".fixed-top">
+
+  <!-- The Modal -->
+  <div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-login">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal body -->
+        <div class="modal-body seminor-login-modal-body">
+          <h5 class="modal-title text-center">LOGIN TO MY ACCOUNT</h5>
+          <button type="button" class="close" data-dismiss="modal" onclick="modalTurnOff()">
+            <span>&times;</span>
+          </button>
+
+
+          <form class="seminor-login-form">
+            <div class="form-group">
+              <input type="email" class="form-control" required autocomplete="off">
+              <label class="form-control-placeholder" for="name">Email address</label>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" required autocomplete="off">
+              <label class="form-control-placeholder" for="password">Password</label>
+            </div>
+
+            <div class="">
+              <button type="submit" class="btn btn-outline-success">LOGIN</button>
+            </div>
+
+            <div class="">
+              <button type="submit" class="btn btn-outline-primary mt-3 w-100" data-toggle="modal" data-target="#sem-reg"
+                data-dismiss="modal">Create
+                A New Account</button>
+            </div>
+
+            <div class="">
+              <button type="submit" class="btn btn-outline-danger btn-sm mt-3 float-right">Forgot Your
+                Password?</button>
+            </div>
+
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-reg">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal body -->
+        <div class="modal-body seminor-login-modal-body">
+          <h5 class="modal-title text-center">CREATE AN ACCOUNT</h5>
+
+          <button type="button" class="close" data-dismiss="modal" onclick="modalTurnOff()">
+            <span>&times;</span>
+          </button>
+
+
+          <form class="seminor-login-form">
+            <div class="form-group">
+              <input type="name" class="form-control" required autocomplete="off">
+              <label class="form-control-placeholder" for="name">User Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" required autocomplete="off">
+              <label class="form-control-placeholder" for="name">Email address</label>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" class="form-control" required autocomplete="off">
+              <label class="form-control-placeholder" for="name">Phone Number</label>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" required autocomplete="off">
+              <label class="form-control-placeholder" for="password">Password</label>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" required autocomplete="off">
+              <label class="form-control-placeholder" for="password">Confirm Password</label>
+            </div>
+
+            <div class="form-group text-center ">
+              <a href="/terms-conditions/" class="text-primary small">
+                By Clicking "SIGN UP" you accept our<br>
+                <span class="">Terms and Conditions</span>
+              </a>
+            </div>
+
+            <div class="">
+              <button type="submit" class="btn btn-outline-success">SIGN UP</button>
+            </div>
+            <div class="text-center pt-3">
+              <button type="submit" class="btn btn-outline-primary" data-toggle="modal" data-target="#sem-login"
+                data-dismiss="modal">Already Have An Account</button>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <header id="home">
 
@@ -90,8 +198,8 @@
         </div>
         <!-- <span class="navbar-text d-none d-xl-inline-block ml-5"> -->
         <span class="navbar-text d-md-inline-block ml-1 nobr">
-          <button class="btn btn-outline-dark" onclick="modalTurnOn()" style="width:auto;">Login
-            || Register</button>
+          <button id="log-reg-btn" class="btn btn-outline-dark" data-toggle="modal" data-target="#sem-login" onclick="modalTurnOn()">Login
+            & Register</button>
         </span>
       </div>
       <!-- container-fluid for header -->
@@ -158,7 +266,7 @@
             <label class="form-control-label sr-only" for="broj-osoba">Broj osoba</label>
             <input id="broj-osoba" class="form-control mx-1 mt-1 col-sm-3 " type="number" placeholder="Broj osoba ">
 
-            <button class="btn btn-primary mx-1 mt-1 col-*" type="submit ">Find room </button>
+            <button class="shit btn btn-primary mx-1 mt-1 col-*" type="submit ">Find room </button>
           </div>
         </div>
       </fieldset>

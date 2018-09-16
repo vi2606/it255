@@ -5,7 +5,7 @@ $('.navbar-nav>li>a').on('click', function () {
 
 
 function modalTurnOn() {
-    document.getElementById('id01').style.display = 'block';
+    // document.getElementById('sem-login').style.display = 'block';
 
     // had to remove fixed top b/c it didnt fade
     // had to add body class b/c of padding for fixed nav
@@ -15,7 +15,7 @@ function modalTurnOn() {
 }
 
 function modalTurnOff() {
-    document.getElementById('id01').style.display = 'none';
+    // document.getElementById('sem-login').style.display = 'none';
 
     // $('body').css("padding-top: 1px;");
     $('body').toggleClass("body");
