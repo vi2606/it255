@@ -1,5 +1,7 @@
 body {
-  background-color: rgb(248, 249, 250);
+  /* background-color: rgb(248, 249, 250); */
+  /* background-color: rgb(125, 170, 211); */
+
   padding-top: 70px;
   font-family: "Raleway", cursive;
   position: relative;
@@ -27,6 +29,7 @@ h6 {
 
 /* header */
 
+
 header img {
   height: 3rem;
 }
@@ -49,24 +52,32 @@ header .navbar-brand {
 /**  Footer **/
 
 footer {
-  background: #586D74;
-  color: white;
+  background: rgb(26, 156, 199);
+  /* color: white; */
+  color: black;
+
   font-size: .8em;
   padding: .7rem 0 .7rem 0;
 }
 
 footer a {
-  color: #E0E6AE;
+  /* color: #E0E6AE; */
+  color: red;
+
 }
 
 footer a:hover {
-  color: #EEC856 !important;
+  /* color: #EEC856 !important; */
+  color: red !important;
+
 }
 
 footer .phone {
   font-size: 1.4em;
   font-weight: 700;
-  color: rgb(202, 214, 88);
+  /* color: rgb(202, 214, 88); */
+  color: pink;
+
 }
 
 .bg-dark {
@@ -101,7 +112,8 @@ footer .navbar-nav a {
 
 #date-pick {
   /* background-image: linear-gradient( rgb(248, 249, 250), rgb(255, 255, 255)); */
-  background-image: linear-gradient(rgb(248, 249, 250), rgb(187, 93, 93));
+  background-image: linear-gradient(rgb(248, 249, 250), rgb(144, 143, 231));
+  margin-top: 20px;
 }
 
 .form-group {
@@ -125,15 +137,17 @@ footer .navbar-nav a {
   /* background-color: #E4D29D;
   background-color: rgb(248, 249, 250); */
   background-image: linear-gradient(to bottom, rgb(219, 219, 195), rgb(219, 219, 195));
-  border-top: 20px solid rgb(187, 167, 167);
+  background-image: linear-gradient(to bottom, rgb(219, 219, 195), rgb(156, 167, 233), rgb(219, 219, 195));
+
+  border-top: 20px solid rgb(144, 143, 231);
 }
 
 /**  Page -- Services **/
 
 #services {
   /* background-image: linear-gradient( rgb(248, 249, 250), rgb(255, 255, 255)); */
-  background-image: linear-gradient(rgb(228, 118, 118), rgb(248, 249, 250));
-  border-top: 20px solid rgb(187, 167, 167);
+  background-image: linear-gradient(rgb(144, 143, 231), rgb(248, 249, 250));
+  border-top: 20px solid rgb(144, 143, 231);
 }
 
 .service {
@@ -157,12 +171,16 @@ footer .navbar-nav a {
   width: auto;
 }
 
+.btn-outline-dark.focus,
+.btn-outline-dark:focus {
+  box-shadow: 0 0 0 0rem rgba(52, 58, 64, .5);
+}
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 450px) {
 
   #log-reg-btn {
-    width: 85vw;
+    width: 55vw;
   }
 
   #date-pick .btn {

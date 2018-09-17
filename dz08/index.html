@@ -22,19 +22,19 @@
 <body data-spy="scroll" data-target=".fixed-top">
 
   <!-- The Modal -->
-  <div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-login">
+  <div class="modal fade mod-login-modal" data-backdrop="static" id="mod-login">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
 
         <!-- Modal body -->
-        <div class="modal-body seminor-login-modal-body">
+        <div class="modal-body mod-login-modal-body">
           <h5 class="modal-title text-center">LOGIN TO MY ACCOUNT</h5>
           <button type="button" class="close" data-dismiss="modal" onclick="modalTurnOff()">
             <span>&times;</span>
           </button>
 
 
-          <form class="seminor-login-form">
+          <form class="mod-login-form">
             <div class="form-group">
               <input type="email" class="form-control" required autocomplete="off">
               <label class="form-control-placeholder" for="name">Email address</label>
@@ -45,7 +45,7 @@
             </div>
 
             <div class="">
-              <button type="submit" class="btn btn-outline-success">LOGIN</button>
+              <button type="submit" class="btn btn-success">LOGIN</button>
             </div>
 
             <div class="">
@@ -68,12 +68,12 @@
   </div>
 
   <!-- The Modal -->
-  <div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-reg">
+  <div class="modal fade mod-login-modal" data-backdrop="static" id="sem-reg">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
 
         <!-- Modal body -->
-        <div class="modal-body seminor-login-modal-body">
+        <div class="modal-body mod-login-modal-body">
           <h5 class="modal-title text-center">CREATE AN ACCOUNT</h5>
 
           <button type="button" class="close" data-dismiss="modal" onclick="modalTurnOff()">
@@ -81,7 +81,7 @@
           </button>
 
 
-          <form class="seminor-login-form">
+          <form class="mod-login-form">
             <div class="form-group">
               <input type="name" class="form-control" required autocomplete="off">
               <label class="form-control-placeholder" for="name">User Name</label>
@@ -112,10 +112,10 @@
             </div>
 
             <div class="">
-              <button type="submit" class="btn btn-outline-success">SIGN UP</button>
+              <button type="submit" class="btn btn-success">SIGN UP</button>
             </div>
             <div class="text-center pt-3">
-              <button type="submit" class="btn btn-outline-primary" data-toggle="modal" data-target="#sem-login"
+              <button type="submit" class="btn btn-outline-primary" data-toggle="modal" data-target="#mod-login"
                 data-dismiss="modal">Already Have An Account</button>
 
             </div>
@@ -129,41 +129,6 @@
 
   <header id="home">
 
-    <!-- modal login -->
-
-    <div id="id01" class="modal" data-backdrop="static">
-
-      <form class="modal-content animate" action="/action_page.php">
-        <div class="imgcontainer">
-          <span onclick="modalTurnOff()" class="close" title="Close Modal">&times;</span>
-          <img src="img/MetHotels2.svg" alt="Avatar" class="avatar">
-        </div>
-
-        <div id="login-form" class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-
-          <button class="btn btn-outline-success" type="submit">Login</button>
-          <!-- <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label> -->
-        </div>
-
-        <div class="container" style="background-color:#f1f1f1">
-          <span class="">
-            <button class="btn btn-outline-primary btn-sm modalbtn" data-toggle="modal" data-target="#sem-reg"
-              data-dismiss="modal">Create
-              A New Account</button>
-          </span>
-          <span type="button" onclick="modalTurnOff()" class="btn btn-outline-danger btn-sm modalbtn cancelbtn">Cancel</span>
-
-        </div>
-      </form>
-    </div>
-
 
     <nav id="main-nav" class="navbar fixed-top bg-light navbar-light navbar-expand-md">
 
@@ -174,9 +139,6 @@
           <!-- <span></span> -->
         </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
         <!-- <div id="navbar1" class="navbar-nav d-sm-inline-block d-md-flex  ml-sm-aut0"> -->
         <div id="navbar1" class="collapse navbar-collapse nobr">
@@ -197,10 +159,16 @@
           </ul>
         </div>
         <!-- <span class="navbar-text d-none d-xl-inline-block ml-5"> -->
-        <span class="navbar-text d-md-inline-block ml-1 nobr">
-          <button id="log-reg-btn" class="btn btn-outline-dark" data-toggle="modal" data-target="#sem-login" onclick="modalTurnOn()">Login
-            & Register</button>
-        </span>
+        <div>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <span class="navbar-text d-md-inline-block ml-1 ">
+            <button id="log-reg-btn" class="btn btn-outline-dark" data-toggle="modal" data-target="#mod-login" onclick="modalTurnOn()">Login
+              & Register</button>
+          </span>
+        </div>
       </div>
       <!-- container-fluid for header -->
     </nav>
@@ -348,7 +316,7 @@
     <div id="footer-id" class=" container-fluid">
       <div class="row">
         <div class="col-sm-4 text-center text-sm-left mb-0">
-          <p class="mb-0">Call us toll-free at
+          <p class="mb-0">Call us toll-free at:
             <span class="phone"> 321-534-1010</span>
           </p>
 
@@ -359,7 +327,7 @@
 
         <div class="col-sm-3 offset-sm-5">
 
-          <nav class="navbar bg-dark navbar-dark justify-content-center">
+          <nav class="navbar bg-dark navbar-light justify-content-center">
             <div id="navbar2" class="navbar-nav  ">
               <ul class="navbar-nav flex-row  ">
                 <li class="nav-item ">
