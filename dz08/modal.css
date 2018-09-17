@@ -1,5 +1,5 @@
 .modal-body.mod-login-modal-body {
-    background-color: rgb(213, 213, 236);
+    background-color: rgb(225, 225, 241);
 }
 
 .modal-title {
@@ -22,10 +22,6 @@
     opacity: 1;
     text-decoration: none;
     outline: 0;
-}
-
-.mod-login-modal .modal-dialog .modal-content {
-    /* border-radius: 0px; */
 }
 
 /* form animation */

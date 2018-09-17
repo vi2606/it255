@@ -171,10 +171,14 @@ footer .navbar-nav a {
   width: auto;
 }
 
-.btn-outline-dark.focus,
-.btn-outline-dark:focus {
+
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-outline-primary.focus,
+.btn-outline-primary:focus {
   box-shadow: 0 0 0 0rem rgba(52, 58, 64, .5);
 }
+
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 450px) {
