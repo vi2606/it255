@@ -28,16 +28,26 @@ if (isset($_POST['loginsubmit'])) {
             <script type="text/javascript">
             (function ($){
                 $('#mod-login').modal('show');
-                $('#mod-login .mod-login-form').before('<div id="log_err" class="error">Error: No such user or bad password</div>');
+
+                // var 1 add div with error
+                // $('#mod-login .mod-login-form').before('<div id="log_err" class="error">Error: No such user or bad password</div>');
 
                 setTimeout(function () {
-                $("#log_err").remove();
+                    // remove err div
+                // $("#log_err").remove();
                 }, 7000);
 
+                // var 2 bootstrap alert
+                $('.alert.alert-danger').toggleClass("hide").toggleClass("show");
+
+                setTimeout(function () {
+                $('.alert.alert-danger').toggleClass("hide").toggleClass("show");
+
+                }, 3000);
 
 
             })(jQuery);
-            </script>;
+            </script>
             <?php
 }
     } else {
@@ -73,7 +83,7 @@ if (isset($_POST['regsubmit'])) {
     // }
 
     if (!empty($error)) {
-        echo "</br>modal should folow </br>";
+        // echo "</br>modal should folow </br>";
         ?>
                 <script>
 
@@ -92,17 +102,28 @@ if (isset($_POST['regsubmit'])) {
             <script type="text/javascript">
             (function ($){
 
-                console.log('before msg modal...'+ new Date());
-                $('#msg-modal').modal('show');
-                // $('#msg-modal .modal-body').html('<div id="msg-div" class="error">User added</div>');
+                // var 1 - popup with modal, autohide in 3 sec, change hide to show
+                $('#msg-modal').modal('hide');
                 $('#msg-modal .modal-header').after('<div id="log_err" class="modal-body msg">User added ! </br> <?php
 
             echo ' Login with email address: <span style="color:red">' . $_POST['email'] . '</span> and password!'
 
             ?></div>');
 
+
                 setTimeout(function () {
-                $("#msg-modal").modal("hide");
+                // enable next line to autohide
+                // $("#msg-modal").modal("hide");
+
+          }, 3000);
+
+
+                // var 2 - bootstrap alert
+
+                $('.alert.alert-success').toggleClass("hide").toggleClass("show");
+
+                 setTimeout(function () {
+                $('.alert.alert-success').toggleClass("hide").toggleClass("show");
 
           }, 3000);
 

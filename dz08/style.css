@@ -193,7 +193,10 @@ footer .navbar-nav a {
 
 .error {
   border: 1px solid red;
+  border-radius: 6px;
   color: red;
+  margin: 5px 5px 1px 5px;
+  padding: 5px;
   /* font-size: x-large; */
 }
 
@@ -204,6 +207,17 @@ footer .navbar-nav a {
   margin: 5px 5px 15px 5px;
   padding: 5px;
   /* font-size: x-large; */
+}
+
+.alert {
+  font-size: larger;
+  position: fixed;
+  top: 35vh;
+  left: 33vw;
+  width: 35vw;
+  /* height: 10vh; */
+  margin: auto;
+  z-index: 2300;
 }
 
 
