@@ -266,6 +266,17 @@ footer .navbar-nav a {
 
   }
 
+  .alert {
+    font-size: larger;
+    position: fixed;
+    top: 35vh;
+    left: 33vw;
+    /* width: 35vw; */
+    /* height: 10vh; */
+    margin: auto;
+    z-index: 2300;
+  }
+
 }
 
 /* // Small devices (landscape phones, less than 768px) */
