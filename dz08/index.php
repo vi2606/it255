@@ -1,3 +1,8 @@
+<?php
+session_start();
+include "php/functions.php";
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -11,8 +16,6 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="modal.css">
-
-
   <title> MetHotels </title>
 </head>
 
@@ -34,22 +37,24 @@
           </button>
 
 
-          <form class="mod-login-form">
+          <form class="mod-login-form" action="index.php" method="POST">
             <div class="form-group">
-              <input type="email" class="form-control" required autocomplete="off">
+              <!-- <input type="email" class="form-control" required autocomplete="off" name="email"> -->
+              <input type="name" class="form-control" required autocomplete="off" name="email">
+
               <label class="form-control-placeholder" for="name">Email address</label>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" required autocomplete="off">
+              <input type="password" class="form-control" required autocomplete="off" name="password">
               <label class="form-control-placeholder" for="password">Password</label>
             </div>
 
             <div class="">
-              <button type="submit" class="btn btn-success">LOGIN</button>
+              <button type="submit" class="btn btn-success" name="loginsubmit">LOGIN</button>
             </div>
 
             <div class="">
-              <button type="submit" class="btn btn-outline-primary mt-3 w-100" data-toggle="modal" data-target="#sem-reg"
+              <button type="submit" class="btn btn-outline-primary mt-3 w-100" data-toggle="modal" data-target="#mod-reg"
                 data-dismiss="modal">Create
                 A New Account</button>
             </div>
@@ -68,9 +73,8 @@
   </div>
 
   <!-- The Modal -->
-  <div class="modal fade mod-login-modal" data-backdrop="static" id="sem-reg">
+  <div class="modal fade mod-login-modal" data-backdrop="static" id="mod-reg">
     <div class="modal-dialog modal-dialog-centered">
-
       <div class="modal-content">
 
         <!-- Modal body -->
@@ -82,26 +86,46 @@
           </button>
 
 
-          <form class="mod-login-form">
+          <form class="mod-login-form"  action="index.php" method="POST">
             <div class="form-group">
-              <input type="name" class="form-control" required autocomplete="off">
-              <label class="form-control-placeholder" for="name">User Name</label>
+              <input type="name" class="form-control" required autocomplete="off" name="fname"  value="<?php
+if (isset($_POST['fname'])) {
+    echo h($_POST['fname']);
+}
+?>">
+              <label class="form-control-placeholder" for="name">First Name</label>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" required autocomplete="off">
+              <input type="name" class="form-control" required autocomplete="off" name="lname"   value="<?php
+if (isset($_POST['lname'])) {
+    echo h($_POST['lname']);
+}
+?>">
+              <label class="form-control-placeholder" for="name">Last Name</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" class="form-control" required autocomplete="off" name="phone"   value="<?php
+if (isset($_POST['phone'])) {
+    echo h($_POST['phone']);
+}
+?>">
+              <label class="form-control-placeholder" for="name">Phone Number</label>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" required autocomplete="off" name="email"   value="<?php
+if (isset($_POST['email'])) {
+    echo h($_POST['email']);
+}
+?>">
               <label class="form-control-placeholder" for="name">Email address</label>
             </div>
 
             <div class="form-group">
-              <input type="tel" class="form-control" required autocomplete="off">
-              <label class="form-control-placeholder" for="name">Phone Number</label>
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control" required autocomplete="off">
+              <input type="password" class="form-control" required autocomplete="off" name="password">
               <label class="form-control-placeholder" for="password">Password</label>
             </div>
             <div class="form-group">
-              <input type="password" class="form-control" required autocomplete="off">
+              <input type="password" class="form-control" required autocomplete="off"  name="confpassword">
               <label class="form-control-placeholder" for="password">Confirm Password</label>
             </div>
 
@@ -113,7 +137,7 @@
             </div>
 
             <div class="">
-              <button type="submit" class="btn btn-success">SIGN UP</button>
+              <button type="submit" class="btn btn-success" name="regsubmit">SIGN UP</button>
             </div>
             <div class="text-center pt-3">
               <button type="submit" class="btn btn-outline-primary" data-toggle="modal" data-target="#mod-login"
@@ -126,6 +150,30 @@
       </div>
     </div>
   </div>
+
+
+
+  <!-- msg modal -->
+
+<div class="modal" tabindex="-1" role="dialog" id="msg-modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title">Modal title</h5> -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div> -->
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div> -->
+    </div>
+  </div>
+</div>
 
 
   <header id="home">
@@ -361,19 +409,19 @@
     <!-- footer content container -->
   </footer>
 
-
-
-
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
-    crossorigin="anonymous "></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script> -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy "
-    crossorigin="anonymous "></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
   <script src="script.js"></script>
 
 </body>
 
 </html>
+
+<?php
+include "php/post_process_index.php";
+?>
+
+

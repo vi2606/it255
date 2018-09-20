@@ -118,8 +118,11 @@ footer .navbar-nav a {
 
 #date-pick {
   /* background-image: linear-gradient( rgb(248, 249, 250), rgb(255, 255, 255)); */
-  background-image: linear-gradient(rgb(248, 249, 250), rgb(144, 143, 231));
-  margin-top: 20px;
+  /* background-image: linear-gradient(rgb(248, 249, 250), rgb(144, 143, 231)); */
+  background-image: linear-gradient(rgb(144, 143, 231), rgb(248, 249, 250));
+  border-top: 20px solid rgb(144, 143, 231);
+
+  /* margin-top: 20px; */
 }
 
 .form-group {
@@ -145,7 +148,9 @@ footer .navbar-nav a {
   background-image: linear-gradient(to bottom, rgb(219, 219, 195), rgb(219, 219, 195));
   background-image: linear-gradient(to bottom, rgb(219, 219, 195), rgb(156, 167, 233), rgb(219, 219, 195));
 
-  border-top: 20px solid rgb(144, 143, 231);
+  /* border-top: 20px solid rgb(144, 143, 231); */
+  border-top: 20px solid white;
+
 }
 
 /**  Page -- Services **/
@@ -183,6 +188,22 @@ footer .navbar-nav a {
 .btn-outline-primary.focus,
 .btn-outline-primary:focus {
   box-shadow: 0 0 0 0rem rgba(52, 58, 64, .5);
+}
+
+
+.error {
+  border: 1px solid red;
+  color: red;
+  /* font-size: x-large; */
+}
+
+.msg {
+  border: 3px solid blue;
+  border-radius: 10px;
+  color: blue;
+  margin: 5px 5px 15px 5px;
+  padding: 5px;
+  /* font-size: x-large; */
 }
 
 

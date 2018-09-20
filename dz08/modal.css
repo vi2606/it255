@@ -81,3 +81,8 @@
     padding: 7px 0 0 13px;
     margin: 0;
 }
+
+#msg-modal .modal-header {
+    padding: .5rem;
+    padding-bottom: 2px;
+}
